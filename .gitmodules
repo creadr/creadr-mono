@@ -1,0 +1,6 @@
+[submodule "creadr-frontend"]
+	path = creadr-frontend
+	url = https://github.com/creadr/creadr-frontend.git
+[submodule "creadr-api"]
+	path = creadr-api
+	url = https://github.com/creadr/creadr-api.git
