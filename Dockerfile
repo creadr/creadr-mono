@@ -8,16 +8,16 @@ COPY creadr-api/test test
 COPY creadr-api/requirements.txt ./
 COPY creadr-api/manage.py ./
 
-RUN pip install --upgrade pip\
+RUN pip install --upgrade pip \
     pip install -r ./requirements.txt
 
-RUN mkdir -p www\
+RUN mkdir -p www \
     mkdir -p frontend
 copy creadr-frontend frontend
-RUN cd frontend\
-    npm install\
-    npm build\
-    mv dist ../www\
+RUN cd frontend \
+    npm install \
+    npm build \
+    mv dist ../www \
     cd /deploy
 # Setup nginx
 RUN rm /etc/nginx/sites-enabled/default
