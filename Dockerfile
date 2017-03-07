@@ -37,4 +37,5 @@ COPY conf/gunicorn.conf /etc/supervisor/conf.d/gunicorn.conf
 EXPOSE 80
 
 # Start processes
-CMD ["supervisord"]
+#CMD ["supervisord"]
+CMD ["supervisorctl", "update"]
