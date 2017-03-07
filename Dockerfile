@@ -15,10 +15,11 @@ RUN mkdir -p www
 RUN mkdir -p frontend
 copy creadr-frontend frontend
 RUN cd frontend
+WORKDIR /deploy/frontend
 RUN npm install
 RUN npm build
 RUN mv dist ../www
-RUN cd /deploy
+WORKDIR /deploy
 # Setup nginx
 RUN rm /etc/nginx/sites-enabled/default
 COPY conf/flask.conf /etc/nginx/sites-available/
