@@ -7,6 +7,7 @@ COPY creadr-api/creadr creadr
 COPY creadr-api/test test
 COPY creadr-api/requirements.txt ./
 COPY creadr-api/manage.py ./
+COPY test.sh ./
 
 RUN pip install --upgrade pip
 RUN pip install -r ./requirements.txt
