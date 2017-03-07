@@ -2,4 +2,4 @@ version: '2'
 services:
   sut:
     build: .
-    command: ['./manage.py', 'test']
+    command: ['./test.sh']

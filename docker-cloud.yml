@@ -1,5 +1,5 @@
-creadr-api:
-  image: martinney/creadr-api
+creadr-mono:
+  image: martinney/creadr-mono
   autorestart: always
   autoredeploy: true
   ports:
