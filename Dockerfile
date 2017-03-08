@@ -12,14 +12,13 @@ COPY test.sh ./
 RUN pip install --upgrade pip
 RUN pip install -r ./requirements.txt
 
-RUN mkdir -p www
 RUN mkdir -p frontend
 copy creadr-frontend frontend
 RUN cd frontend
 WORKDIR /deploy/frontend
 RUN npm install
 RUN npm build
-RUN mv dist www
+RUN mv dist ../www
 WORKDIR /deploy
 # Setup nginx
 RUN rm /etc/nginx/sites-enabled/default
