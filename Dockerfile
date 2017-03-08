@@ -17,7 +17,7 @@ copy creadr-frontend frontend
 RUN cd frontend
 WORKDIR /deploy/frontend
 RUN npm install
-RUN npm build
+RUN npm run build
 RUN mv dist ../www
 WORKDIR /deploy
 # Setup nginx
